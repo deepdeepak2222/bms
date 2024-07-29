@@ -1,0 +1,51 @@
+version: '3.8'
+
+networks:
+  bms:
+    name: bms
+    external: true
+
+services:
+  db:
+    image: postgres:latest
+    container_name: bms_db
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - bms
+
+  backend:
+    container_name: bms_backend
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+#    command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    command: sh -c "tail -f /dev/null"
+    volumes:
+      - ../:/app/bms
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+    depends_on:
+      - db
+    env_file:
+      - .env
+    networks:
+      - bms
+
+  rec-sys:
+    image: deepdeepak2222/knnrecommendsystem:latest
+    container_name: bms-rec-sys
+    ports:
+      - "8555:8555"
+    networks:
+      - bms
+
+volumes:
+  postgres_data:
