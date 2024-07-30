@@ -1,0 +1,1121 @@
+{
+	"info": {
+		"_postman_id": "6b742255-108f-4d3b-8f6f-d458b93b17a1",
+		"name": "BMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1446162"
+	},
+	"item": [
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "List Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/api/books/",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"books",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Books",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{SERVER}}/api/books/",
+									"host": [
+										"{{SERVER}}"
+									],
+									"path": [
+										"api",
+										"books",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2024 10:50:46 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.19"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1276"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 2,\n        \"title\": \"First Book\",\n        \"author\": \"Deepak\",\n        \"genre\": \"Sci Fi\",\n        \"year_published\": 2024,\n        \"content\": \"EdFinancial and the Oklahoma Student Loan Authority (OSLA) are notifying over 2.5 million loanees that their personal data was exposed in a data breach. The target of the breach was Nelnet Servicing, the Lincoln, Neb.-based servicing system and web portal provider for OSLA and EdFinancial, according to a breach disclosure letter. Nelnet revealed the breach to affected loan recipients on July 21, 2022 via a letter.\",\n        \"summary\": null\n    },\n    {\n        \"id\": 3,\n        \"title\": \"First Book\",\n        \"author\": \"Deepak\",\n        \"genre\": \"Sci Fi\",\n        \"year_published\": 2024,\n        \"content\": \"EdFinancial and the Oklahoma Student Loan Authority (OSLA) are notifying over 2.5 million loanees that their personal data was exposed in a data breach. The target of the breach was Nelnet Servicing, the Lincoln, Neb.-based servicing system and web portal provider for OSLA and EdFinancial, according to a breach disclosure letter. Nelnet revealed the breach to affected loan recipients on July 21, 2022 via a letter.\",\n        \"summary\": \" EdFinancial and the Oklahoma Student Loan Authority are notifying over 2.5 million loanees that their personal data was exposed in a data breach . The target of the breach was Nelnet Servicing, the Lincoln, Neb.-\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Add Book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Nineth Book\",\n    \"author\": \"Deepak\",\n    \"genre\": \"Horror\",\n    \"year_published\": \"2024\",\n    \"content\": \"EdFinancial and the Oklahoma Student Loan Authority (OSLA) are notifying over 2.5 million loanees that their personal data was exposed in a data breach. The target of the breach was Nelnet Servicing, the Lincoln, Neb.-based servicing system and web portal provider for OSLA and EdFinancial, according to a breach disclosure letter. Nelnet revealed the breach to affected loan recipients on July 21, 2022 via a letter.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SERVER}}/api/books/",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"books",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Book",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"First Book\",\n    \"author\": \"Deepak\",\n    \"genre\": \"Sci Fi\",\n    \"year_published\": \"2024\",\n    \"content\": \"EdFinancial and the Oklahoma Student Loan Authority (OSLA) are notifying over 2.5 million loanees that their personal data was exposed in a data breach. The target of the breach was Nelnet Servicing, the Lincoln, Neb.-based servicing system and web portal provider for OSLA and EdFinancial, according to a breach disclosure letter. Nelnet revealed the breach to affected loan recipients on July 21, 2022 via a letter.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SERVER}}/api/books/",
+									"host": [
+										"{{SERVER}}"
+									],
+									"path": [
+										"api",
+										"books",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2024 10:47:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.19"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "742"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"title\": \"First Book\",\n    \"author\": \"Deepak\",\n    \"genre\": \"Sci Fi\",\n    \"year_published\": 2024,\n    \"content\": \"EdFinancial and the Oklahoma Student Loan Authority (OSLA) are notifying over 2.5 million loanees that their personal data was exposed in a data breach. The target of the breach was Nelnet Servicing, the Lincoln, Neb.-based servicing system and web portal provider for OSLA and EdFinancial, according to a breach disclosure letter. Nelnet revealed the breach to affected loan recipients on July 21, 2022 via a letter.\",\n    \"summary\": \" EdFinancial and the Oklahoma Student Loan Authority are notifying over 2.5 million loanees that their personal data was exposed in a data breach . The target of the breach was Nelnet Servicing, the Lincoln, Neb.-\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve Book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/api/books/2",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retrieve Book",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{SERVER}}/api/books/3",
+									"host": [
+										"{{SERVER}}"
+									],
+									"path": [
+										"api",
+										"books",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2024 10:51:57 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.19"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "742"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"title\": \"First Book\",\n    \"author\": \"Deepak\",\n    \"genre\": \"Sci Fi\",\n    \"year_published\": 2024,\n    \"content\": \"EdFinancial and the Oklahoma Student Loan Authority (OSLA) are notifying over 2.5 million loanees that their personal data was exposed in a data breach. The target of the breach was Nelnet Servicing, the Lincoln, Neb.-based servicing system and web portal provider for OSLA and EdFinancial, according to a breach disclosure letter. Nelnet revealed the breach to affected loan recipients on July 21, 2022 via a letter.\",\n    \"summary\": \" EdFinancial and the Oklahoma Student Loan Authority are notifying over 2.5 million loanees that their personal data was exposed in a data breach . The target of the breach was Nelnet Servicing, the Lincoln, Neb.-\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve Book Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/api/books/2",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retrieve Book",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{SERVER}}/api/books/3",
+									"host": [
+										"{{SERVER}}"
+									],
+									"path": [
+										"api",
+										"books",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2024 10:51:57 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.19"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "742"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"title\": \"First Book\",\n    \"author\": \"Deepak\",\n    \"genre\": \"Sci Fi\",\n    \"year_published\": 2024,\n    \"content\": \"EdFinancial and the Oklahoma Student Loan Authority (OSLA) are notifying over 2.5 million loanees that their personal data was exposed in a data breach. The target of the breach was Nelnet Servicing, the Lincoln, Neb.-based servicing system and web portal provider for OSLA and EdFinancial, according to a breach disclosure letter. Nelnet revealed the breach to affected loan recipients on July 21, 2022 via a letter.\",\n    \"summary\": \" EdFinancial and the Oklahoma Student Loan Authority are notifying over 2.5 million loanees that their personal data was exposed in a data breach . The target of the breach was Nelnet Servicing, the Lincoln, Neb.-\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete A Book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/api/books/3/",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"3",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete A Book",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{SERVER}}/api/books/3/",
+									"host": [
+										"{{SERVER}}"
+									],
+									"path": [
+										"api",
+										"books",
+										"3",
+										""
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2024 10:56:55 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.19"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "List All Reviews",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"book\": 2, // ID of the book being reviewed\n    \"user_id\": 123, // ID of the user leaving the review\n    \"review_text\": \"This is an example review text.\",\n    \"rating\": 5 // Rating value, e.g., 1-5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SERVER}}/api/reviews/",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"reviews",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List All Reviews",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"book\": 2, // ID of the book being reviewed\n    \"user_id\": 123, // ID of the user leaving the review\n    \"review_text\": \"This is an example review text.\",\n    \"rating\": 5 // Rating value, e.g., 1-5\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SERVER}}/api/reviews/",
+									"host": [
+										"{{SERVER}}"
+									],
+									"path": [
+										"api",
+										"reviews",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2024 11:07:48 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.19"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"user_id\": 123,\n        \"review_text\": \"This is an example review text.\",\n        \"rating\": 5,\n        \"book\": 2\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Retrieve Review",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"book\": 2, // ID of the book being reviewed\n    \"user_id\": 123, // ID of the user leaving the review\n    \"review_text\": \"This is an example review text.\",\n    \"rating\": 5 // Rating value, e.g., 1-5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SERVER}}/api/reviews/1/",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"reviews",
+								"1",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Retrieve Review",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"book\": 2, // ID of the book being reviewed\n    \"user_id\": 123, // ID of the user leaving the review\n    \"review_text\": \"This is an example review text.\",\n    \"rating\": 5 // Rating value, e.g., 1-5\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SERVER}}/api/reviews/1/",
+									"host": [
+										"{{SERVER}}"
+									],
+									"path": [
+										"api",
+										"reviews",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2024 11:08:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.19"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "90"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"user_id\": 123,\n    \"review_text\": \"This is an example review text.\",\n    \"rating\": 5,\n    \"book\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "Get a summary and aggregated rating for a book.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/api/books/2/summary",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"2",
+								"summary"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a summary and aggregated rating for a book.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{SERVER}}/api/books/2/summary",
+									"host": [
+										"{{SERVER}}"
+									],
+									"path": [
+										"api",
+										"books",
+										"2",
+										"summary"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2024 11:15:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.19"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "115"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"First Book\",\n    \"author\": \"Deepak\",\n    \"genre\": \"Sci Fi\",\n    \"year_published\": 2024,\n    \"summary\": null,\n    \"average_rating\": 5\n}"
+						}
+					]
+				},
+				{
+					"name": "Get a summary and aggregated rating for a book. Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/api/books/2/summary",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"books",
+								"2",
+								"summary"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a summary and aggregated rating for a book.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{SERVER}}/api/books/2/summary",
+									"host": [
+										"{{SERVER}}"
+									],
+									"path": [
+										"api",
+										"books",
+										"2",
+										"summary"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2024 11:15:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.19"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "115"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"First Book\",\n    \"author\": \"Deepak\",\n    \"genre\": \"Sci Fi\",\n    \"year_published\": 2024,\n    \"summary\": null,\n    \"average_rating\": 5\n}"
+						}
+					]
+				},
+				{
+					"name": "Get book recommendations based on user preferences.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/api/recommendations?genres=Horror&min_rating=3",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"recommendations"
+							],
+							"query": [
+								{
+									"key": "genres",
+									"value": "Horror"
+								},
+								{
+									"key": "min_rating",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get book recommendations based on user preferences.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{SERVER}}/api/recommendations?genres=Horror&min_rating=3",
+									"host": [
+										"{{SERVER}}"
+									],
+									"path": [
+										"api",
+										"recommendations"
+									],
+									"query": [
+										{
+											"key": "genres",
+											"value": "Horror"
+										},
+										{
+											"key": "min_rating",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2024 11:41:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.19"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "745"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 8,\n        \"title\": \"Eighth Book\",\n        \"author\": \"Deepak\",\n        \"genre\": \"Horror\",\n        \"year_published\": 2024,\n        \"content\": \"EdFinancial and the Oklahoma Student Loan Authority (OSLA) are notifying over 2.5 million loanees that their personal data was exposed in a data breach. The target of the breach was Nelnet Servicing, the Lincoln, Neb.-based servicing system and web portal provider for OSLA and EdFinancial, according to a breach disclosure letter. Nelnet revealed the breach to affected loan recipients on July 21, 2022 via a letter.\",\n        \"summary\": \" EdFinancial and the Oklahoma Student Loan Authority are notifying over 2.5 million loanees that their personal data was exposed in a data breach . The target of the breach was Nelnet Servicing, the Lincoln, Neb.-\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Summarizer",
+			"item": [
+				{
+					"name": "Get Summary By Content",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\": \"By August 17th, the investigation determined that personal user information was accessed by an unauthorized party. That exposed information included names, home addresses, email addresses, phone numbers and social security numbers for a total of 2,501,324 student loan account holders. Users’ financial information was not exposed.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SUMMARY_SERVER}}/book/summary",
+							"host": [
+								"{{SUMMARY_SERVER}}"
+							],
+							"path": [
+								"book",
+								"summary"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "Add Review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"book\": 8, // ID of the book being reviewed\n    \"user_id\": 122, // ID of the user leaving the review\n    \"review_text\": \"This is an example review text.\",\n    \"rating\": 5 // Rating value, e.g., 1-5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SERVER}}/api/reviews/",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"api",
+								"reviews",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Review",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"book\": 2, // ID of the book being reviewed\n    \"user_id\": 123, // ID of the user leaving the review\n    \"review_text\": \"This is an example review text.\",\n    \"rating\": 5 // Rating value, e.g., 1-5\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{SERVER}}/api/reviews/",
+									"host": [
+										"{{SERVER}}"
+									],
+									"path": [
+										"api",
+										"reviews",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2024 11:04:25 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.19"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "90"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"user_id\": 123,\n    \"review_text\": \"This is an example review text.\",\n    \"rating\": 5,\n    \"book\": 2\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "SERVER",
+			"value": "http://0.0.0.0:8000",
+			"type": "string"
+		},
+		{
+			"key": "SUMMARY_SERVER",
+			"value": "http://127.0.0.1:8555",
+			"type": "string"
+		}
+	]
+}
